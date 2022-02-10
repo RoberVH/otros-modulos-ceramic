@@ -3,7 +3,7 @@ import './App.css';
 import React, { useState } from 'react';
 import { Core } from '@self.id/core'
 //import { EthereumAuthProvider, SelfID, WebClient } from '@self.id/web'
-import { addresses, authenticate, initialize, self, client } from './utils/ceramic-api'
+import { addresses, authenticate, initialize, self, client, authenticate_ceramic } from './utils/ceramic-api'
 import UserProfile from './UserProfile'
 import UpdateProfile from './UpdateProfile'
 
@@ -86,7 +86,7 @@ initialize()
         <button style={{marginLeft:'15px'}} onClick={getprofile}>Get Profile</button>
         <hr></hr>
         { user && (
-        <button style={{marginLeft:'15px'}} onClick={getDataModel}>Read Data Model</button>
+        <button style={{marginLeft:'15px'}} onClick={authenticate_ceramic}>Autenticar con ceramic</button>
         )}
         </div>
       </div>
